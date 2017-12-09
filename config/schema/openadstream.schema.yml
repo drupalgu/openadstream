@@ -1,0 +1,19 @@
+openadstream.openadstream.*:
+  type: config_entity
+  label: 'OpenAdStream config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    description:
+      type: string
+      label: 'Description'
+    width:
+      type: string
+      label: 'Width'
+    height:
+      type: string
+      label: 'Height'

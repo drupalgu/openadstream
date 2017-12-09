@@ -1,0 +1,5 @@
+entity.openadstream.add_form:
+  route_name: 'entity.openadstream.add_form'
+  title: 'Add Position'
+  appears_on:
+    - entity.openadstream.collection

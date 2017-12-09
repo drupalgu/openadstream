@@ -1,0 +1,8 @@
+name: OpenAdStream
+description: Open AdStream.
+type: module
+version: '8.x-dev'
+core: '8.x'
+project: 'openadstream'
+datestamp: 1512371337
+configure: openadstream.settings

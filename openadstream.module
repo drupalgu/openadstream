@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function openadstream_preprocess_page(&$vars) {
+  $query = \Drupal::entityQuery('openadstream');
+  $ids = $query->execute();
+  $position = [];
+  $crain_oas_settings = \Drupal::config('openadstream.settings');
+  $oas_server = $crain_oas_settings->get('openadstream_hostname');
+  $oas_client = $crain_oas_settings->get('clint_hostname');
+  $oas_tag = $crain_oas_settings->get('openadstream_tag');
+  switch ($oas_tag) {
+    case 'dx':
+      foreach ($ids as $key => $id) {
+        $current_entity = \Drupal::config('openadstream.openadstream.' . $key);
+        $position[$key]['width'] = $current_entity->get('width');
+        $position[$key]['height'] = $current_entity->get('height');
+      }
+    break;
+  }
+  $js_setting['openadstream'] = [
+    'oas_client' => $oas_client,
+    'url' => $oas_server,
+    'position' => $position,
+  ];
+  $vars['#attached']['drupalSettings'] = $js_setting;
+  $vars['#attached']['library'][] = 'openadstream/openadstream.js';
+}

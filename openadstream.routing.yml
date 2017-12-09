@@ -1,0 +1,39 @@
+entity.openadstream.collection:
+  path: '/admin/config/services/openadstream'
+  defaults:
+    _entity_list: 'openadstream'
+    _title: 'OpenAdStream configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.openadstream.add_form:
+  path: '/admin/config/services/openadstream/add'
+  defaults:
+    _entity_form: 'openadstream.add'
+    _title: 'Add Position'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.openadstream.edit_form:
+  path: '/admin/config/services/openadstream/{openadstream}'
+  defaults:
+    _entity_form: 'openadstream.edit'
+    _title: 'Edit Position'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.openadstream.delete_form:
+  path: '/admin/config/services/openadstream/{openadstream}/delete'
+  defaults:
+    _entity_form: 'openadstream.delete'
+    _title: 'Delete Position'
+  requirements:
+    _permission: 'administer site configuration'
+
+openadstream.settings:
+  path: '/admin/config/services/openadstream/settings'
+  defaults:
+    _form: '\Drupal\openadstream\Form\OpenAdStreamSettingForm'
+    _title: 'OpenAdStream Settings'
+  requirements:
+    _permission: 'administer site configuration'

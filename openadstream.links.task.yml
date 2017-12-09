@@ -1,0 +1,8 @@
+entity.openadstream.collection:
+  route_name: entity.openadstream.collection
+  title: 'List'
+  base_route: entity.openadstream.collection
+crain_oas.settings:
+  route_name: openadstream.settings
+  title: 'Settings'
+  base_route: entity.openadstream.collection

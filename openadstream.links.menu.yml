@@ -1,0 +1,6 @@
+entity.openadstream.collection:
+  title: 'OpenAdStream'
+  parent: system.admin_config_services
+  route_name: entity.openadstream.collection
+  description: 'Settings page for Open AdStream'
+
